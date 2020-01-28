@@ -1,3 +1,4 @@
+import numpy as np
 import tensorflow as tf
 
 def init_pytorch(shape, dtype=tf.float32, partition_info=None):
