@@ -24,12 +24,12 @@ def write_tf_records (x, y, file_path):
 		tf_example = create_tf_example (element, y[i])
 		writer.write (tf_example.SerializeToString ())
 
-def decode (serialized_example, image_size):
+def decode (serialized_example):
 	"""
 	Parses an image and label from the given `serialized_example`.
 	It is used as a map function for `dataset.map`
 	"""
-	IMAGE_SIZE = image_size
+	IMAGE_SIZE = 40
 	IMAGE_PIXELS = IMAGE_SIZE * IMAGE_SIZE * 3
 	
 	# 1. define a parser
